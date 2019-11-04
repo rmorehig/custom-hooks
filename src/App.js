@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import useModalPage from "./pages/useModalPage/";
 import useModalWithDataPage from "./pages/useModalWithDataPage/";
+import useSubmitPage from "./pages/useSubmitPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Switch>
             <Route path="/usemodal" component={useModalPage} />
             <Route path="/usemodalwithdata" component={useModalWithDataPage} />
+            <Route path="/usesubmit" component={useSubmitPage} />
           </Switch>
         </section>
       </Router>
