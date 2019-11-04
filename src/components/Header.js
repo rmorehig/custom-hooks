@@ -16,6 +16,9 @@ const Header = () => (
         <NavLink to="/usemodal" className="navbar-item">
           useModal
         </NavLink>
+        <NavLink to="/usemodalwithdata" className="navbar-item">
+          useModalWithData
+        </NavLink>
       </div>
     </div>
   </nav>

@@ -38,7 +38,7 @@ const data = [
   }
 ];
 
-const useModalPage = () => {
+const useModalWithDataPage = () => {
   const [modalShow, setModalShow, toggleModal] = useModal();
   return (
     <>
@@ -51,4 +51,4 @@ const useModalPage = () => {
   );
 };
 
-export default useModalPage;
+export default useModalWithDataPage;
