@@ -16,7 +16,7 @@ const useSubmitPage = () => {
       <section className="section">
         <div className="container">
           <button onClick={handleSubmit} className="button is-primary">
-            Get Data
+            Submit Data
           </button>
         </div>
       </section>
