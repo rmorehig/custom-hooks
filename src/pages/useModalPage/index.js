@@ -1,6 +1,6 @@
 import React from "react";
-import useModal from "./hooks/useModal";
-import Modal from "./components/Modal";
+import useModal from "../../hooks/useModal";
+import Modal from "../../components/Modal";
 
 const useModalPage = () => {
   const [modalShow, setModalShow, toggleModal] = useModal();
@@ -9,7 +9,7 @@ const useModalPage = () => {
       <section className="section">
         <div className="container">
           <button onClick={toggleModal} className="button is-primary">
-            Show simple modal
+            Show modal
           </button>
         </div>
         <Modal
@@ -17,7 +17,7 @@ const useModalPage = () => {
           title="Simple modal"
           handleClose={() => setModalShow(false)}
         >
-          This is my modal
+          This is a simple modal
         </Modal>
       </section>
     </>

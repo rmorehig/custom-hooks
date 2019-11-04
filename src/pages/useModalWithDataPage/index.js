@@ -1,50 +1,68 @@
 import React from "react";
-import useModal from "./hooks/useModal";
-import Modal from "./components/Modal";
+import Modal from "../../components/Modal";
 import UserList from "./components/UserList";
+import UserInfo from "./components/UserInfo";
+import useModalWithData from "../../hooks/useModalWithData";
 
 const data = [
   {
     id: 1,
-    name: "Oyetoke Toby",
-    age: 20,
-    job: "Software Engineer",
-    country: "Nigeria",
+    name: "Rafael Moreno",
+    age: 31,
+    job: "Frontend Developer",
+    country: "Spain",
     gender: "male"
   },
   {
     id: 2,
-    name: "Apata Dorcas",
+    name: "Ana Giera",
     age: 21,
-    job: "Makeup Stylist",
-    country: "Nigeria",
+    job: "Nurse",
+    country: "Holland",
     gender: "female"
   },
   {
     id: 3,
-    name: "Jonh Doe",
-    age: 22,
-    job: "Graphic Designer",
-    country: "US",
+    name: "John Snow",
+    age: 32,
+    job: "King of The Seven Kingdoms",
+    country: "UK",
     gender: "male"
   },
   {
     id: 4,
-    name: "Leke Oyetoke",
-    age: 30,
-    job: "IT Manager",
-    country: "Nigeria",
+    name: "Lucky Luke",
+    age: 25,
+    job: "Cowboy",
+    country: "US",
     gender: "male"
   }
 ];
 
 const useModalWithDataPage = () => {
-  const [modalShow, setModalShow, toggleModal] = useModal();
+  const [
+    modalShow,
+    setModalShow,
+    selected,
+    setSelected,
+    setModalState
+  ] = useModalWithData();
   return (
     <>
       <section className="section">
         <div className="container">
-          <UserList data={data} />
+          <Modal
+            title="User Detail"
+            isActive={modalShow}
+            handleClose={() => setModalState(false)}
+          >
+            <UserInfo {...selected} />
+          </Modal>
+          <UserList
+            data={data}
+            setSelected={setSelected}
+            setModalState={setModalState}
+          />
         </div>
       </section>
     </>

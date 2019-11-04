@@ -10,5 +10,5 @@ export default (initialState = false, initialSelected = null) => {
       setSelected(null);
     }
   };
-  return { modalShow, setModalShow, selected, setSelected, setModalState };
+  return [modalShow, setModalShow, selected, setSelected, setModalState];
 };
