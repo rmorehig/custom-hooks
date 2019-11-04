@@ -1,14 +1,12 @@
 import { useState } from "react";
 import useModal from "./useModal";
 
-export default (initialState = false, initialSelected = null) => {
-  const [modalShow, setModalShow] = useModal(initialState);
-  const [selected, setSelected] = useState(initialSelected);
-  const setModalState = state => {
-    setModalShow(state);
-    if (state === false) {
-      setSelected(null);
-    }
+export default (initialState = false, initialData = null) => {
+  const [isModalActive, setIsModalActive] = useModal(initialState);
+  const [data, setData] = useState(initialData);
+  const setIsModalWithDataActive = state => {
+    setIsModalActive(state);
+    !state && setData(null);
   };
-  return [modalShow, setModalShow, selected, setSelected, setModalState];
+  return [setIsModalWithDataActive, isModalActive, data, setData];
 };

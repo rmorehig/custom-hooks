@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserList = ({ data, setSelected, setModalState }) => {
+const UserList = ({ data, setIsModalActive, setData }) => {
   return (
     <table className="table is-fullwidth">
       <thead>
@@ -23,8 +23,8 @@ const UserList = ({ data, setSelected, setModalState }) => {
                 <button
                   className="button is-primary"
                   onClick={() => {
-                    setSelected(row);
-                    setModalState(true);
+                    setData(row);
+                    setIsModalActive(true);
                   }}
                 >
                   Details

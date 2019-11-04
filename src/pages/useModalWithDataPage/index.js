@@ -4,7 +4,7 @@ import UserList from "./components/UserList";
 import UserInfo from "./components/UserInfo";
 import useModalWithData from "../../hooks/useModalWithData";
 
-const data = [
+const users = [
   {
     id: 1,
     name: "Rafael Moreno",
@@ -41,11 +41,10 @@ const data = [
 
 const useModalWithDataPage = () => {
   const [
-    modalShow,
-    setModalShow,
-    selected,
-    setSelected,
-    setModalState
+    setIsModalWithDataActive,
+    isModalActive,
+    data,
+    setData
   ] = useModalWithData();
   return (
     <>
@@ -53,15 +52,15 @@ const useModalWithDataPage = () => {
         <div className="container">
           <Modal
             title="User Detail"
-            isActive={modalShow}
-            handleClose={() => setModalState(false)}
+            isActive={isModalActive}
+            handleClose={() => setIsModalWithDataActive(false)}
           >
-            <UserInfo {...selected} />
+            <UserInfo {...data} />
           </Modal>
           <UserList
-            data={data}
-            setSelected={setSelected}
-            setModalState={setModalState}
+            data={users}
+            setData={setData}
+            setIsModalActive={setIsModalWithDataActive}
           />
         </div>
       </section>
