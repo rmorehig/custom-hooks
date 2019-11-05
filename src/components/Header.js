@@ -22,6 +22,9 @@ const Header = () => (
         <NavLink to="/usesubmit" className="navbar-item">
           useSubmit
         </NavLink>
+        <NavLink to="/usefetch" className="navbar-item">
+          useFetch
+        </NavLink>
       </div>
     </div>
   </nav>

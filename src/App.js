@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import useModalPage from "./pages/useModalPage/";
 import useModalWithDataPage from "./pages/useModalWithDataPage/";
 import useSubmitPage from "./pages/useSubmitPage";
-
+import useFetchPage from "./pages/useFetchPage";
 function App() {
   return (
     <div className="App">
@@ -16,6 +16,7 @@ function App() {
             <Route path="/usemodal" component={useModalPage} />
             <Route path="/usemodalwithdata" component={useModalWithDataPage} />
             <Route path="/usesubmit" component={useSubmitPage} />
+            <Route path="/usefetch" component={useFetchPage} />
           </Switch>
         </section>
       </Router>
