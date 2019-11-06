@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export default (initialState = false) => {
   const [isModalActive, setIsModalActive] = useState(initialState);

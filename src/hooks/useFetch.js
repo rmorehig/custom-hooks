@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export default (url, options) => {
   const [data, setData] = useState(null);
@@ -10,10 +10,10 @@ export default (url, options) => {
       setLoading(true);
       setError(null);
       const results = await fetch(url, options);
-      const data = await results.json();
-      setData(data);
-    } catch (error) {
-      setError(error);
+      const res = await results.json();
+      setData(res);
+    } catch (err) {
+      setError(err);
     } finally {
       setLoading(false);
     }
