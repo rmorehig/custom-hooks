@@ -1,15 +1,11 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import logo from "../logo.svg";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import logo from '../logo.svg';
 
 const Header = () => (
-  <nav
-    className="navbar is-link"
-    role="navigation"
-    aria-label="main navigation"
-  >
+  <nav className="navbar is-link" role="navigation" aria-label="main navigation">
     <div className="navbar-brand">
-      <img src={logo} style={{ height: "50px" }} alt="custom-hooks-logo" />
+      <img src={logo} style={{ height: '50px' }} alt="custom-hooks-logo" />
     </div>
     <div id="navbarBasicExample" className="navbar-menu">
       <div className="navbar-start">
@@ -24,6 +20,9 @@ const Header = () => (
         </NavLink>
         <NavLink to="/usefetch" className="navbar-item">
           useFetch
+        </NavLink>
+        <NavLink to="/useapi" className="navbar-item">
+          useApi
         </NavLink>
       </div>
     </div>
